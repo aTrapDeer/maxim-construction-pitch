@@ -45,6 +45,24 @@ const inquiryLinks = ["Special Projects", "Contact", "Privacy Policy"];
 
 const socialIcons = ["public", "share", "shield"];
 
+/** AIDA asset URLs (aligned with codeConcept / legacy Maxim mock) */
+const media = {
+  heroConstruction:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDYl-kUzWGdNfTzQvHQhgd9LVlOnBHtNxM6b_7ECESbIOOz9gEwIbOUPQUCb0uw7SZHlCvkigEgdXG84eefdRFT4i5QRUupGJmlFaAD-YQkVOnHRMvg54V7f8fZUvHsZ5DnkDiZpfptsSyo2nUxSD_4OF8Tg02a_ixgDsGuII-Z2tlqAK92GESWq_vFEmIC0L3OqT-ZN0mWu1QqwLyaFCLQGNK4wd1rU2QNCEy-Xk8RpwIkKv_DeGsMzSZj3ISCC65NNu24b01tdPU",
+  constructionManagement:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuB9xZ9o_qPT2dvJvk05hNWQdjsIk4E55LYDExQY5Z7ZjEubvCCkpVABXURLvgqhUuGOt-S2TKbT3LLdoM3KmVj_acwKLGhZLHyAxD9MLBGdQtUs49lsnhY96nprVy6kg5U2USF_soYR74P-urHBnVHzB7pTn9L2M1j-h-8jOGiFsVwc-QHvQYOM94OVR9zt7SKNHP5kl80vHx_Ci362auvbvTm7CgtwvBBrEeHmHo3DlhmSFfN7UjJjrqLo98ekjYue8Oj4SIzR8ms",
+  officeInterior:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBHSs7rJHu8ODXmBl9k7P5siCV8GXa2pj_t8mAag5hebEn0Qt6oLvC6mKpX9ZOXu_Qftjc0CZzlLP45UbeinW6rVggkStCXTyGbRVmjfa-_a-J97AKJ4h0iQD17SOduEE4u7DtJS_Q-T8Uk5AkyoMdUHM319AGYvRXiGantkjyn-m1U2hNCjtvgM83KXFzrJxhVN6rwnL71x67Y45UzVL1z1fVCWeFOeDz4_8t-40tdr34m-Xj-lzkjryVpZOHEHwbbYdAGWWS8nfc",
+  engineeringDetail:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBca0RiQ84K68B-w-CKCPHhizFwZjDqSupP_MPmfZYw8OBQHhcKU3W2RfapQSZHW11o90LPbWhz8a3WhhsRdr0RnhULT0O2k_THSRlJyHv14giQoK5vu57rH7CdZcksAP1sj2YgQZtmraG542fsu7_0BWAbdaOlkpMFjCedVrFBDJO-yFdYCqzh5IeF7Z2CHSTsEDMaaVWDPnODV2cEVmQt2lTnPZEpY0I6jk8l9yhIvqmEUGZK2GJO_Ebfz3UDlJRPxj8GsTOKJrE",
+  skyscraper:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCqExpTNrRlsS3GE1gI5ubsn7OGaRybHi5TsqoZVdpNR39K4ls2F17SMUmcCOwAr8FOM5jndSLpgRXIClGvtmvvB-c3JfPciP0FQoreHCczte7H0zIyoT73NhqUkqVbUx4ggxzDchyocpll0Qy-fo7O1ASMyvEOqy8USVWtohgwgXGPo4egyjkv0pmdKl0dTR4g1XZ1ins_vFXuxd_m5LkXaSg5XlJMEcPYa-nFrej2mqTEQy5vcBFvt4FjfWp8ehAYprhvYxqctDc",
+  logoNav:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAY5iylOrIejj3pl6HFwFlQefp85ks3vJ27JNTyO92HVh4s2dXuQznQfoP1nomkJEI9FfWBjFANoNpp9ATxc0EFGUKS2z5IA0kXOtuhX1HKdMkSBEH6fZMdjXCMZJ0eoq6Lupq2EU656n90K13wDXD-SqE_3c93jtNTGHxdJX2DMgeM2nYtBq_ByymieJ9n8CO_YcRmaqVn04ULNxa22hTrlnIIcOnrLSMyXqjxLOIeT64RbK1dNewxP0Q3B0u5CM6g_FHd9X-L598",
+  logoFooter:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDWBv1JK7iEFmW96os0HCQqBUd0Ic1_svqfDvtPdwgPzPuhjjAN8Hd2eJhdYuLpA4n7fcoCRUUWHWEpAP2nE24UGBTUqNPiEsEAi1QUszOINL6oVEdVO4yFBqIR5tFEuu2LhV55ap7DN7qhK039vHKm3t6jtmASpnyognXU1cRNU_mug0x8AgWchriVvfR5z-1L6vzP451ha1Yzu_8aqrMHsKjmTz9YHPaXg1ZWXwrXWvARhyt32QQIwMxHuKXF0BQoxllIiVTiUfs",
+} as const;
+
 type IconProps = {
   name: string;
   className?: string;
@@ -367,10 +385,15 @@ export default function Home() {
     <div className="selection:bg-brand-accent selection:text-white bg-brand-light text-brand-gray font-body antialiased">
       <nav className="fixed top-0 z-50 w-full bg-white/80 shadow-sm backdrop-blur-xl border-b border-brand-border">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-brand-dark">
-              <MaterialSymbol name="architecture" className="text-xl text-white" />
-            </div>
+          <div className="flex items-center gap-2">
+            <Image
+              src={media.logoNav}
+              alt="MAXIM logo"
+              width={96}
+              height={32}
+              className="h-8 w-auto object-contain"
+              priority
+            />
             <span className="font-headline text-2xl font-black tracking-tighter text-brand-dark">
               MAXIM
             </span>
@@ -409,7 +432,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYl-kUzWGdNfTzQvHQhgd9LVlOnBHtNxM6b_7ECESbIOOz9gEwIbOUPQUCb0uw7SZHlCvkigEgdXG84eefdRFT4i5QRUupGJmlFaAD-YQkVOnHRMvg54V7f8fZUvHsZ5DnkDiZpfptsSyo2nUxSD_4OF8Tg02a_ixgDsGuII-Z2tlqAK92GESWq_vFEmIC0L3OqT-ZN0mWu1QqwLyaFCLQGNK4wd1rU2QNCEy-Xk8RpwIkKv_DeGsMzSZj3ISCC65NNu24b01tdPU"
+              src={media.heroConstruction}
               alt="Major infrastructure construction"
               fill
               priority
@@ -525,62 +548,118 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="group cursor-pointer">
-                <div className="flex h-full flex-col justify-between rounded-sm border border-brand-border/50 bg-white p-10 shadow-minimal transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                  <div>
-                    <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-sm bg-brand-light transition-colors duration-500 group-hover:bg-brand-accent">
-                      <MaterialSymbol
-                        name="engineering"
-                        className="text-2xl text-brand-dark transition-colors group-hover:text-white"
-                      />
-                    </div>
-                    <h3 className="mb-4 font-headline text-3xl font-bold tracking-tight text-brand-dark">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+              <div className="group md:col-span-7">
+                <div className="relative flex min-h-[400px] h-full flex-col justify-end overflow-hidden rounded-sm border border-brand-border/50 bg-white p-8 shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl">
+                  <Image
+                    src={media.constructionManagement}
+                    alt="Construction management planning and blueprints"
+                    fill
+                    sizes="(min-width: 768px) 58vw, 100vw"
+                    className="object-cover opacity-15 transition duration-700 group-hover:scale-105 group-hover:opacity-30"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-white via-white/85 to-transparent md:bg-linear-to-r md:from-white md:via-white/80 md:to-transparent" />
+                  <div className="relative z-10">
+                    <MaterialSymbol
+                      name="engineering"
+                      className="mb-4 text-4xl text-brand-accent"
+                    />
+                    <h3 className="mb-2 font-headline text-2xl font-bold text-brand-dark md:text-3xl">
                       Construction Management
                     </h3>
-                    <p className="mb-8 leading-relaxed text-brand-muted">
+                    <p className="mb-6 max-w-md text-brand-muted">
                       Expert project leadership ensuring every weld, beam, and
-                      circuit meets the highest 2026 industry benchmarks with
-                      zero compromise on quality.
+                      circuit meets the highest 2026 industry benchmarks.
                     </p>
+                    <a
+                      href="#contact"
+                      className="inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest text-brand-dark transition-all group-hover:gap-4 group-hover:text-brand-accent"
+                    >
+                      Explore Specs
+                      <MaterialSymbol name="north_east" className="text-sm" />
+                    </a>
                   </div>
-                  <div className="mb-6 h-px w-full bg-brand-border transition-colors group-hover:bg-brand-accent/20"></div>
-                  <span className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-widest text-brand-dark transition-colors group-hover:text-brand-accent">
-                    Explore Specs{" "}
-                    <MaterialSymbol
-                      name="north_east"
-                      className="text-sm transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-                    />
-                  </span>
                 </div>
               </div>
 
-              <div className="group cursor-pointer">
-                <div className="flex h-full flex-col justify-between rounded-sm border border-brand-border/50 bg-white p-10 shadow-minimal transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+              <div className="group md:col-span-5">
+                <div className="flex min-h-[400px] h-full flex-col justify-between rounded-sm border border-brand-border/50 bg-brand-dark p-8 text-white shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl">
+                  <div className="flex items-start justify-between gap-4">
+                    <MaterialSymbol
+                      name="domain"
+                      className="text-4xl text-brand-accent"
+                    />
+                    <span className="border border-white/20 px-2 py-1 font-label text-[10px] uppercase tracking-wider text-white/80">
+                      Transformation unit
+                    </span>
+                  </div>
                   <div>
-                    <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-sm bg-brand-light transition-colors duration-500 group-hover:bg-brand-accent">
-                      <MaterialSymbol
-                        name="domain"
-                        className="text-2xl text-brand-dark transition-colors group-hover:text-white"
-                      />
-                    </div>
-                    <h3 className="mb-4 font-headline text-3xl font-bold tracking-tight text-brand-dark">
+                    <h3 className="mb-2 font-headline text-2xl font-bold text-white">
                       Office Renovation
                     </h3>
-                    <p className="mb-8 leading-relaxed text-brand-muted">
-                      Modernizing your workspace for the future with
-                      tech-integrated structural updates, sustainable materials,
-                      and adaptive layouts.
+                    <p className="mb-6 text-sm text-white/75">
+                      Modernizing your workspace with tech-integrated
+                      structural updates, sustainable materials, and adaptive
+                      layouts.
+                    </p>
+                    <Image
+                      src={media.officeInterior}
+                      alt="Modern office interior"
+                      width={640}
+                      height={256}
+                      className="h-32 w-full rounded-sm object-cover grayscale brightness-90"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="group md:col-span-5">
+                <div className="relative min-h-[350px] h-full overflow-hidden rounded-sm border border-brand-border/50 bg-brand-border/30 p-8 shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative z-10">
+                    <MaterialSymbol
+                      name="settings_suggest"
+                      className="mb-4 text-4xl text-brand-dark"
+                    />
+                    <h3 className="mb-2 font-headline text-2xl font-bold text-brand-dark">
+                      Factory Maintenance
+                    </h3>
+                    <p className="text-sm text-brand-muted">
+                      Zero-downtime industrial maintenance for heavy
+                      manufacturing plants and logistics hubs.
                     </p>
                   </div>
-                  <div className="mb-6 h-px w-full bg-brand-border transition-colors group-hover:bg-brand-accent/20"></div>
-                  <span className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-widest text-brand-dark transition-colors group-hover:text-brand-accent">
-                    Explore Specs{" "}
-                    <MaterialSymbol
-                      name="north_east"
-                      className="text-sm transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                  <div className="pointer-events-none absolute bottom-0 right-0 h-1/2 w-1/2 text-brand-dark/10">
+                    <MaterialSymbol name="factory" className="text-[180px]" />
+                  </div>
+                </div>
+              </div>
+
+              <div className="group md:col-span-7">
+                <div className="flex min-h-[350px] h-full flex-col items-center gap-8 rounded-sm border border-brand-border/50 border-t-4 border-t-brand-accent bg-white p-8 shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl md:flex-row">
+                  <div className="flex-1">
+                    <h3 className="mb-4 font-headline text-3xl font-black text-brand-dark">
+                      Special Projects
+                    </h3>
+                    <p className="mb-6 text-brand-muted">
+                      Crafting your most complex visions into reality—from
+                      sub-terrain facilities to aerospace assembly zones.
+                    </p>
+                    <div className="mb-2 h-2 w-full bg-brand-border">
+                      <div className="h-full w-[85%] bg-brand-accent" />
+                    </div>
+                    <span className="font-label text-[10px] uppercase tracking-widest text-brand-muted">
+                      Project complexity rating: high
+                    </span>
+                  </div>
+                  <div className="aspect-square w-full shrink-0 overflow-hidden rounded-sm bg-brand-border md:w-1/3">
+                    <Image
+                      src={media.engineeringDetail}
+                      alt="Precision engineering and steel detail"
+                      width={560}
+                      height={560}
+                      className="h-full w-full object-cover grayscale transition duration-700 group-hover:grayscale-0"
                     />
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -647,7 +726,7 @@ export default function Home() {
             <div className="relative">
               <div className="clip-diagonal relative aspect-4/5 overflow-hidden rounded-sm bg-brand-light">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqExpTNrRlsS3GE1gI5ubsn7OGaRybHi5TsqoZVdpNR39K4ls2F17SMUmcCOwAr8FOM5jndSLpgRXIClGvtmvvB-c3JfPciP0FQoreHCczte7H0zIyoT73NhqUkqVbUx4ggxzDchyocpll0Qy-fo7O1ASMyvEOqy8USVWtohgwgXGPo4egyjkv0pmdKl0dTR4g1XZ1ins_vFXuxd_m5LkXaSg5XlJMEcPYa-nFrej2mqTEQy5vcBFvt4FjfWp8ehAYprhvYxqctDc"
+                  src={media.skyscraper}
                   alt="Modern skyscraper detail"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
@@ -674,7 +753,18 @@ export default function Home() {
           id="contact"
           className="relative overflow-hidden bg-brand-dark py-32 text-white"
         >
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={media.heroConstruction}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover opacity-20 mix-blend-luminosity grayscale"
+              aria-hidden
+            />
+            <div className="absolute inset-0 bg-brand-dark/85" />
+          </div>
+          <div className="absolute inset-0 z-0 opacity-10">
             <div className="tectonic-grid h-full w-full"></div>
           </div>
           <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
@@ -713,12 +803,13 @@ export default function Home() {
         <div className="mx-auto mb-16 grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <div className="mb-8 flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-white">
-                <MaterialSymbol
-                  name="architecture"
-                  className="text-xl text-brand-dark"
-                />
-              </div>
+              <Image
+                src={media.logoFooter}
+                alt="MAXIM logo"
+                width={72}
+                height={24}
+                className="h-6 w-auto object-contain brightness-0 invert"
+              />
               <span className="font-headline text-2xl font-black tracking-tighter text-white">
                 MAXIM
               </span>
