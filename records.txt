@@ -1,0 +1,228 @@
+Skip to main content
+Skip to main content
+cPanel logo
+Tools
+Sitejet Builder
+Social Media Management
+WordPress Management
+Site Quality Monitoring
+Search Tools (/)
+
+Zone Editor
+Domains Manage Zone
+DNS converts domain names into computer-readable IP addresses. Use this feature to manage DNS zones. For more information, read the documentation.
+
+Zone Records for “maximconstruction.net”
+Configured nameservers for this zone: tangons1.cybercon.comtangons2.cybercon.com
+Filter by name
+Filter: 
+All
+A
+CAA
+CNAME
+MX
+SRV
+TXT
+<<<>>>
+Displaying 1 to 57 out of 57 items
+
+  
+Name	TTL	Type	Record	Actions
+mail.maximconstruction.net.	3600	CNAME	
+maximconstruction.net
+ 
+maximconstruction.net.	600	A	
+198.185.159.144
+ 
+localhost.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+www.maximconstruction.net.	600	CNAME	
+ext-cust.squarespace.com
+ 
+ftp.maximconstruction.net.	3600	CNAME	
+maximconstruction.net
+ 
+cpanel.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+whm.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+webmail.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+webdisk.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+cpcalendars.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+cpcontacts.maximconstruction.net.	600	A	
+142.214.201.26
+ 
+maximconstruction.net.	600	TXT	
+MS=ms54816646
+ 
+maximconstruction.net.	600	TXT	
+v=spf1 include:spf.protection.outlook.com -all
+ 
+autodiscover.maximconstruction.net.	14400	CNAME	
+autodiscover.outlook.com
+ 
+maximconstruction.net.	14400	CAA	
+Flags: 0
+Tag: issue
+Value: comodoca.com
+ 
+_cpanel-dcv-test-record.maximconstruction.net.	14400	TXT	
+_cpanel-dcv-test-record=DokkhhiwgoBu_hfMF4gpLjTs7Hyj0IO0b3Ci4_TAgGGEnofR2ZkNj8DC5AfkCb1f
+ 
+_8b1e210ebee8508fdc75a89ade4e9f1f.mail.maximconstruction.net.	14400	CNAME	
+c1ff503430adb756fe5bc0132f0ff182.c352b3da60f988bb5ae80962577aa814.comodoca.com
+ 
+_57c9936c8394443d2ce591769e7f6cf9.mail.maximconstruction.net.	14400	CNAME	
+ada87de87293ddf85e71024004409dff.1ea78119660acb2fc3a4d3fb08651242.comodoca.com
+ 
+_c62fba62767e44726b85fdf6f2dfa1c5.mail.maximconstruction.net.	14400	CNAME	
+44165ee68f0092ddd5197e2c53c28ea4.81de08d5ac3ec4780959f910b00c62fa.comodoca.com
+ 
+_31ff50e934601528a1980f42ddfcb937.mail.maximconstruction.net.	14400	CNAME	
+645d2b379d34e61b41c163df98b716aa.3a633a679ddb5c87e15b3a0be083dde9.comodoca.com
+ 
+_c71f04897a9ceb6bb5323ed94d0a50e1.mail.maximconstruction.net.	14400	CNAME	
+1eca407a521353fd49774c496b9256f8.cd78ab16b7444607d0e1079d61ad8f32.comodoca.com
+ 
+_72e5c7b8a6e50e944d13518ea3d53d4d.mail.maximconstruction.net.	14400	CNAME	
+62c80adb48f2b99d56a158a0f74ee68b.f6913ac8a9f71c0efc4a70c9dadd2168.comodoca.com
+ 
+_b5512fad91d959c47e3535ac4e7c7657.mail.maximconstruction.net.	14400	CNAME	
+ef7c1ce8c398c98c96548ac53dda876a.83b076e672b1d6efadb1b221f1f06fa2.comodoca.com
+ 
+_6165f8e8c70070554333acf9822670bb.mail.maximconstruction.net.	14400	CNAME	
+589dd5f4bb84e0e9c2188b8d9714b591.0f94239d398fb5cb0e401a6c894dfc91.comodoca.com
+ 
+_629e00cd958cfeade7b83bbff9970fe1.mail.maximconstruction.net.	14400	CNAME	
+9b946b9c037c4b058bd5025e8fe58f0b.9fd7eca9ce87f31d6bc8a554e7252e67.comodoca.com
+ 
+_e41fd4a1d733317071ac1fd6eb3a0cba.mail.maximconstruction.net.	14400	CNAME	
+da19de1688727504f64c838118509c43.4397b6dbe29b485b475ba6b3f6877116.comodoca.com
+ 
+_a4cf1da747132e8f238c0510c93cf78c.mail.maximconstruction.net.	14400	CNAME	
+b5653a69c9cfc60e9ac340b2215b1e72.a7bfbf03bd368ffff1bb027aa48ef272.comodoca.com
+ 
+_2ffe4d690449740bc2ccc26ec8a1ccad.mail.maximconstruction.net.	14400	CNAME	
+8485f5a070381b1359e5e0ceba774fcb.ce2ed4cd283cc589ae939d93be77fc73.comodoca.com
+ 
+_0992ce98be4c7dc646a6bbd1ec3dc2e5.mail.maximconstruction.net.	14400	CNAME	
+9f5edabd1d3dbdeda9eca4c04281f2e3.3175b3c365b63fd8b7f3a095abe84953.comodoca.com
+ 
+_afd11035f620e42ffdbcc162e703bc8b.mail.maximconstruction.net.	14400	CNAME	
+e8c9c1d157c11cd484da229d358346d1.a72ff268120fecbaa400e59261e544d2.comodoca.com
+ 
+_carddavs._tcp.maximconstruction.net.	14400	SRV	
+Priority: 0
+Weight: 0
+Port: 2080
+Target: 142-214-201-250.cprapid.com
+ 
+_carddavs._tcp.maximconstruction.net.	14400	TXT	
+path=/
+ 
+_carddav._tcp.maximconstruction.net.	14400	SRV	
+Priority: 0
+Weight: 0
+Port: 2079
+Target: 142-214-201-250.cprapid.com
+ 
+_carddav._tcp.maximconstruction.net.	14400	TXT	
+path=/
+ 
+_autodiscover._tcp.maximconstruction.net.	14400	SRV	
+Priority: 0
+Weight: 0
+Port: 443
+Target: cpanelemaildiscovery.cpanel.net
+ 
+autoconfig.maximconstruction.net.	14400	A	
+142.214.201.26
+ 
+_caldavs._tcp.maximconstruction.net.	14400	SRV	
+Priority: 0
+Weight: 0
+Port: 2080
+Target: 142-214-201-250.cprapid.com
+ 
+_caldavs._tcp.maximconstruction.net.	14400	TXT	
+path=/
+ 
+_caldav._tcp.maximconstruction.net.	14400	SRV	
+Priority: 0
+Weight: 0
+Port: 2079
+Target: 142-214-201-250.cprapid.com
+ 
+_caldav._tcp.maximconstruction.net.	14400	TXT	
+path=/
+ 
+maximconstruction.net.	14400	CAA	
+Flags: 0
+Tag: issue
+Value: letsencrypt.org
+ 
+_acme-challenge.maximconstruction.net.	14400	TXT	
+5_-bIxhLR5ttdFvsAplUZWPmajYr4_KzcAofa7M78YM
+ 
+maximconstruction.net.	600	A	
+142.214.201.26
+ 
+maximconstruction.net.	600	A	
+142.214.201.26
+ 
+maximconstruction.net.	600	TXT	
+0ed1fe018a85e52c0ccf414c6b9e2c8959aa1915d1
+ 
+maximconstruction.net.	600	MX	
+Priority: 0
+Destination: maximconstruction-net.mail.protection.outlook.com
+ 
+73c5m68z4czb5dt5d6r7.maximconstruction.net.	600	CNAME	
+verify.squarespace.com
+ 
+maximconstruction.net.	600	A	
+198.185.159.145
+ 
+maximconstruction.net.	600	A	
+198.49.23.144
+ 
+maximconstruction.net.	600	A	
+198.49.23.145
+ 
+maximconstruction.net.	600	TXT	
+google-site-verificgoogle-site-verification=a4C7mPHkkIFD_pXayfGuRFCdjbKTqvf7zoArhtbBKREation=a4C7mPHkkIFD_pXayfGuRFCdjbKTqvf7zoArhtbBKRE
+ 
+_acme-challenge.mail.maximconstruction.net.	14400	TXT	
+i997G7TkWduzJHlX_mfUCC4WnJJF_PjjkmuVEsuSrHs
+ 
+_acme-challenge.www.maximconstruction.net.	14400	TXT	
+TiujjEYVVuqK14WbsYIhg2Dkb4AZ_VegOpneKaxEstI
+ 
+_acme-challenge.autodiscover.maximconstruction.net.	14400	TXT	
+b71uBgbEYL8QC34X_EBs1L_L73ANmmsoM7clLwjaPic
+ 
+_dmarc.maximconstruction.net.	600	TXT	
+v=DMARC1; p=quarantine; pct=100
+ 
+selector1._domainkey.maximconstruction.net.	600	CNAME	
+selector1-maximconstruction-net._domainkey.maximconstructioninc.onmicrosoft.com
+ 
+selector2._domainkey.maximconstruction.net.	600	CNAME	
+selector2-maximconstruction-net._domainkey.maximconstructioninc.onmicrosoft.com
+ 
+cPanel logo
+136.0.24
+Home
+Trademarks
+Privacy Policy
+Documentation
+Give Feedback

@@ -15,9 +15,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "MAXIM | Construction Management Excellence",
+  title: {
+    default: "Maxim Construction | Building Excellence From Concept",
+    template: "%s | Maxim Construction",
+  },
   description:
-    "Construction management, renovation, industrial maintenance, and special project delivery for high-stakes commercial and infrastructure work.",
+    "Construction management, factory maintenance, office renovation, specialty skills, and bid document access for high-stakes commercial and industrial work.",
 };
 
 export default function RootLayout({
