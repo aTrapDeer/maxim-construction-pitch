@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Icon, PageShell, SectionEyebrow, services } from "../_components/site";
 
 export const metadata = {
-  title: "Services",
+  title: "Construction Management, Factory Maintenance & Millwright Services",
   description:
-    "Construction management, factory maintenance, office renovation, and specialty skills for commercial and industrial project work.",
+    "Maxim's St. Louis services: construction management, factory and plant maintenance, office renovation, and specialty skilled work including millwright, machine rigging, and machine moving.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {

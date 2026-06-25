@@ -3,9 +3,10 @@ import { ProjectInquiryForm } from "../_components/contact-forms";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
-  title: "Quote",
+  title: "Get a Quote | Start Your Construction Project",
   description:
-    "Submit a project inquiry to Maxim Construction for estimating, scheduling, and next-step coordination.",
+    "Submit a project inquiry to Maxim Construction for estimating, scheduling, site review, and next-step coordination on St. Louis construction and maintenance work.",
+  alternates: { canonical: "/quote" },
 };
 
 export default function StartProjectPage() {

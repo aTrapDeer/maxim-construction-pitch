@@ -2,9 +2,10 @@ import { BidRequestForm } from "../_components/contact-forms";
 import { PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
-  title: "Contact",
+  title: "Contact Maxim Construction | St. Louis, MO",
   description:
-    "Contact Maxim Construction for bid document access, subcontractor bid requests, and general website inquiries.",
+    "Contact Maxim Construction in St. Louis, MO for bid document access, subcontractor bid requests, and general inquiries. Call (314) 481-4111.",
+  alternates: { canonical: "/contact" },
 };
 
 const bidPackages = [

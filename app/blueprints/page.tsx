@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
-  title: "Bid Documents",
+  title: "Bid Documents & Subcontractor Opportunities",
   description:
-    "Subcontractor access point for Maxim Construction bid documents, prints, project specifications, and upcoming project information.",
+    "Subcontractor access point for Maxim Construction bid documents, prints, project specifications, and upcoming St. Louis project opportunities.",
+  alternates: { canonical: "/blueprints" },
 };
 
 export default function BlueprintsPage() {

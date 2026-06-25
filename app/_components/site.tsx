@@ -2,16 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const media = {
-  heroConstruction:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDYl-kUzWGdNfTzQvHQhgd9LVlOnBHtNxM6b_7ECESbIOOz9gEwIbOUPQUCb0uw7SZHlCvkigEgdXG84eefdRFT4i5QRUupGJmlFaAD-YQkVOnHRMvg54V7f8fZUvHsZ5DnkDiZpfptsSyo2nUxSD_4OF8Tg02a_ixgDsGuII-Z2tlqAK92GESWq_vFEmIC0L3OqT-ZN0mWu1QqwLyaFCLQGNK4wd1rU2QNCEy-Xk8RpwIkKv_DeGsMzSZj3ISCC65NNu24b01tdPU",
-  constructionManagement:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB9xZ9o_qPT2dvJvk05hNWQdjsIk4E55LYDExQY5Z7ZjEubvCCkpVABXURLvgqhUuGOt-S2TKbT3LLdoM3KmVj_acwKLGhZLHyAxD9MLBGdQtUs49lsnhY96nprVy6kg5U2USF_soYR74P-urHBnVHzB7pTn9L2M1j-h-8jOGiFsVwc-QHvQYOM94OVR9zt7SKNHP5kl80vHx_Ci362auvbvTm7CgtwvBBrEeHmHo3DlhmSFfN7UjJjrqLo98ekjYue8Oj4SIzR8ms",
-  officeInterior:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBHSs7rJHu8ODXmBl9k7P5siCV8GXa2pj_t8mAag5hebEn0Qt6oLvC6mKpX9ZOXu_Qftjc0CZzlLP45UbeinW6rVggkStCXTyGbRVmjfa-_a-J97AKJ4h0iQD17SOduEE4u7DtJS_Q-T8Uk5AkyoMdUHM319AGYvRXiGantkjyn-m1U2hNCjtvgM83KXFzrJxhVN6rwnL71x67Y45UzVL1z1fVCWeFOeDz4_8t-40tdr34m-Xj-lzkjryVpZOHEHwbbYdAGWWS8nfc",
-  engineeringDetail:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBca0RiQ84K68B-w-CKCPHhizFwZjDqSupP_MPmfZYw8OBQHhcKU3W2RfapQSZHW11o90LPbWhz8a3WhhsRdr0RnhULT0O2k_THSRlJyHv14giQoK5vu57rH7CdZcksAP1sj2YgQZtmraG542fsu7_0BWAbdaOlkpMFjCedVrFBDJO-yFdYCqzh5IeF7Z2CHSTsEDMaaVWDPnODV2cEVmQt2lTnPZEpY0I6jk8l9yhIvqmEUGZK2GJO_Ebfz3UDlJRPxj8GsTOKJrE",
-  skyscraper:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCqExpTNrRlsS3GE1gI5ubsn7OGaRybHi5TsqoZVdpNR39K4ls2F17SMUmcCOwAr8FOM5jndSLpgRXIClGvtmvvB-c3JfPciP0FQoreHCczte7H0zIyoT73NhqUkqVbUx4ggxzDchyocpll0Qy-fo7O1ASMyvEOqy8USVWtohgwgXGPo4egyjkv0pmdKl0dTR4g1XZ1ins_vFXuxd_m5LkXaSg5XlJMEcPYa-nFrej2mqTEQy5vcBFvt4FjfWp8ehAYprhvYxqctDc",
+  heroConstruction: "/images/hero-construction.png",
+  constructionManagement: "/images/construction-management.png",
+  officeInterior: "/images/office-renovation.png",
+  engineeringDetail: "/images/factory-maintenance.png",
+  skyscraper: "/images/specialty-skills-millwright.png",
   logo:
     "/Maxim+Construction+Management+-+Heavy+Lifting+&+Millwrights+(1).webp",
 } as const;
@@ -357,8 +352,17 @@ export function Footer() {
           <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Contact
           </h2>
-          <p className="text-sm leading-relaxed">
-            General questions and bid requests
+          <address className="text-sm not-italic leading-relaxed">
+            5922 S Broadway
+            <br />
+            St. Louis, MO 63111
+            <br />
+            <a
+              href="tel:+13144811411"
+              className="font-bold text-white transition-colors hover:text-brand-accent"
+            >
+              (314) 481-4111
+            </a>
             <br />
             <br />
             <Link
@@ -367,7 +371,7 @@ export function Footer() {
             >
               Contact Maxim
             </Link>
-          </p>
+          </address>
         </div>
       </div>
 

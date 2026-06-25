@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
-  title: "About",
+  title: "About Maxim Construction | St. Louis Industrial & Commercial Builder",
   description:
-    "About Maxim Construction, its credentials, local skilled craftsmen, and fabrication relationships.",
+    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN and KOKA credentials, and broad fabrication capability.",
+  alternates: { canonical: "/about" },
 };
 
 const credentials = ["ISN", "KOKA", "Safety and trade credentials"];
@@ -110,9 +111,19 @@ export default function AboutPage() {
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-6 md:flex-row md:items-center">
           <div>
             <SectionEyebrow>Next Step</SectionEyebrow>
-            <h2 className="font-headline text-4xl font-black tracking-tighter">
+            <h2 className="mb-6 font-headline text-4xl font-black tracking-tighter">
               Need a project conversation?
             </h2>
+            <address className="not-italic leading-relaxed text-white/72">
+              5922 S Broadway, St. Louis, MO 63111
+              <br />
+              <a
+                href="tel:+13144811411"
+                className="font-bold text-white transition-colors hover:text-brand-accent"
+              >
+                (314) 481-4111
+              </a>
+            </address>
           </div>
           <Link
             href="/quote"

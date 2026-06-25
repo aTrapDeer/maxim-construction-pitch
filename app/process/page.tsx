@@ -7,9 +7,10 @@ import {
 } from "../_components/site";
 
 export const metadata = {
-  title: "Process",
+  title: "Our Construction Process | Consultation to Close-Out",
   description:
-    "Maxim's project process from consultation and engineering through design, execution, punch list, and close-out.",
+    "Maxim's front-to-back project process from consultation and engineering through design, execution, punch list, and close-out for industrial, commercial, and maintenance work.",
+  alternates: { canonical: "/process" },
 };
 
 export default function ProcessPage() {
