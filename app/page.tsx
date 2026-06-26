@@ -47,7 +47,7 @@ export default function Home() {
                 href="/blueprints"
                 className="inline-flex items-center justify-center rounded-sm border-2 border-white bg-white/10 px-8 py-4 font-headline font-bold tracking-wide text-white! backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 hover:border-white hover:bg-white hover:text-brand-dark!"
               >
-                VIEW BLUEPRINTS
+                BID OPPORTUNITIES
               </Link>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
               href="/blueprints"
               className="w-full rounded-sm border-2 border-brand-dark px-10 py-5 font-headline text-lg font-bold tracking-wide text-brand-dark transition-all duration-300 hover:bg-brand-dark hover:text-white! sm:w-auto"
             >
-              BID DOCUMENTS
+              BID OPPORTUNITIES
             </Link>
           </div>
         </div>

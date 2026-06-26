@@ -55,6 +55,26 @@ const LabelText = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
+function SubmittedPanel({ className }: { className?: string }) {
+  return (
+    <div
+      aria-live="polite"
+      className={`flex flex-col items-start gap-5 rounded-sm border border-brand-border bg-white p-8 shadow-minimal sm:p-12 ${className ?? ""}`}
+    >
+      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent">
+        <Icon name="check_circle" className="text-3xl" />
+      </span>
+      <h2 className="font-headline text-3xl font-black tracking-tighter text-brand-dark">
+        Your message has been sent
+      </h2>
+      <p className="max-w-md text-lg leading-relaxed text-brand-muted">
+        Thank you for reaching out. Maxim has received your submission and will
+        get back to you as soon as possible.
+      </p>
+    </div>
+  );
+}
+
 function StatusMessage({ state }: { state: ContactFormState }) {
   if (!state.message) {
     return null;
@@ -193,22 +213,20 @@ function HiddenFormFields({ formType }: { formType: string }) {
 }
 
 export function BidRequestForm() {
-  const formRef = useRef<HTMLFormElement>(null);
   const [turnstileReady, setTurnstileReady] = useState(false);
   const [state, formAction, pending] = useActionState(
     submitContactForm,
     initialState,
   );
 
-  useEffect(() => {
-    if (state.status === "success") {
-      formRef.current?.reset();
-    }
-  }, [state.submittedAt, state.status]);
+  if (state.status === "success") {
+    return (
+      <SubmittedPanel className="scroll-mt-28 lg:col-span-8" />
+    );
+  }
 
   return (
     <form
-      ref={formRef}
       id="bid-request"
       action={formAction}
       className="scroll-mt-28 rounded-sm border border-brand-border bg-white p-6 shadow-minimal sm:p-8 lg:col-span-8"
@@ -311,22 +329,18 @@ const projectTypes = [
 ];
 
 export function ProjectInquiryForm() {
-  const formRef = useRef<HTMLFormElement>(null);
   const [turnstileReady, setTurnstileReady] = useState(false);
   const [state, formAction, pending] = useActionState(
     submitContactForm,
     initialState,
   );
 
-  useEffect(() => {
-    if (state.status === "success") {
-      formRef.current?.reset();
-    }
-  }, [state.submittedAt, state.status]);
+  if (state.status === "success") {
+    return <SubmittedPanel className="lg:col-span-8" />;
+  }
 
   return (
     <form
-      ref={formRef}
       action={formAction}
       className="rounded-sm border border-brand-border bg-white p-6 shadow-minimal sm:p-8 lg:col-span-8"
     >
