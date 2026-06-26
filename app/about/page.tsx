@@ -126,7 +126,7 @@ export default function AboutPage() {
             </address>
           </div>
           <Link
-            href="/quote"
+            href="/contact"
             className="inline-flex items-center gap-3 rounded-sm bg-brand-accent px-8 py-4 font-headline font-bold tracking-wide text-white! transition-all hover:bg-white hover:text-brand-dark!"
           >
             GET QUOTE <Icon name="arrow_forward" />

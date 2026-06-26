@@ -226,10 +226,10 @@ export function BidRequestForm() {
           </p>
         </div>
         <Link
-          href="/quote"
+          href="/contact"
           className="inline-flex items-center gap-2 font-headline font-bold text-brand-dark transition-colors hover:text-brand-accent"
         >
-          Client quote page <Icon name="arrow_forward" />
+          Client project page <Icon name="arrow_forward" />
         </Link>
       </div>
 

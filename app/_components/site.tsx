@@ -270,7 +270,7 @@ export function Header() {
         </div>
 
         <Link
-          href="/quote"
+          href="/contact"
           className="flex shrink-0 items-center gap-2 rounded-sm bg-brand-accent px-4 py-2.5 font-headline text-sm font-bold tracking-tight text-white! shadow-hover transition-all duration-300 hover:bg-brand-dark hover:text-white! active:scale-95 sm:px-6"
         >
           Get Quote
@@ -333,8 +333,8 @@ export function Footer() {
             {[
               ["Process", "/process"],
               ["About", "/about"],
-              ["Contact", "/contact"],
-              ["Get Quote", "/quote"],
+              ["Contact & Quote", "/contact"],
+              ["Bid Documents", "/blueprints"],
             ].map(([label, href]) => (
               <li key={label}>
                 <Link

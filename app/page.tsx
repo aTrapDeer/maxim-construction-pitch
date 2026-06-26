@@ -34,7 +34,7 @@ export default function Home() {
 
             <div className="animate-fade-in-up animation-delay-200 opacity-0-init flex flex-wrap gap-4">
               <Link
-                href="/quote"
+                href="/contact"
                 className="group flex items-center gap-3 rounded-sm bg-brand-accent px-8 py-4 font-headline font-bold tracking-wide text-white! shadow-hover transition-all duration-300 hover:bg-white hover:text-brand-dark!"
               >
                 START YOUR PROJECT
@@ -228,7 +228,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/quote"
+              href="/contact"
               className="group flex w-full items-center justify-center gap-3 rounded-sm bg-brand-accent px-10 py-5 font-headline text-lg font-bold tracking-wide text-white! shadow-hover transition-all duration-300 hover:bg-brand-dark sm:w-auto"
             >
               START YOUR PROJECT

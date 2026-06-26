@@ -4,8 +4,8 @@ import { SITE_URL } from "./_lib/seo";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  // Canonical routes only. /start-project is intentionally omitted — it
-  // permanently redirects to /quote and is canonicalized there.
+  // Canonical routes only. /quote and /start-project are intentionally omitted —
+  // they permanently redirect to /contact, which is the canonical client page.
   const routes: Array<{
     path: string;
     priority: number;
@@ -13,11 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }> = [
     { path: "/", priority: 1, changeFrequency: "monthly" },
     { path: "/services", priority: 0.9, changeFrequency: "monthly" },
-    { path: "/process", priority: 0.7, changeFrequency: "yearly" },
+    { path: "/contact", priority: 0.8, changeFrequency: "yearly" },
     { path: "/about", priority: 0.7, changeFrequency: "yearly" },
-    { path: "/quote", priority: 0.8, changeFrequency: "yearly" },
+    { path: "/process", priority: 0.7, changeFrequency: "yearly" },
     { path: "/blueprints", priority: 0.6, changeFrequency: "monthly" },
-    { path: "/contact", priority: 0.6, changeFrequency: "yearly" },
   ];
 
   return routes.map(({ path, priority, changeFrequency }) => ({

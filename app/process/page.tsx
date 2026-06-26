@@ -68,7 +68,7 @@ export default function ProcessPage() {
           </div>
           <div className="lg:col-span-4 lg:text-right">
             <Link
-              href="/quote"
+              href="/contact"
               className="inline-flex items-center gap-3 rounded-sm bg-brand-accent px-8 py-4 font-headline font-bold tracking-wide text-white! shadow-hover transition-all hover:bg-brand-dark"
             >
               GET QUOTE <Icon name="arrow_forward" />
