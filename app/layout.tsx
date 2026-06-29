@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { StructuredData } from "./_components/structured-data";
 import { SITE_URL, business } from "./_lib/seo";
@@ -15,6 +16,8 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
   variable: "--font-space-grotesk",
 });
+
+const googleAnalyticsId = "G-PX8K68BL3K";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -80,6 +83,18 @@ export default function RootLayout({
         <StructuredData />
         {children}
       </body>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${googleAnalyticsId}');
+        `}
+      </Script>
     </html>
   );
 }
