@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BreadcrumbSchema } from "../_components/structured-data";
 import {
   Icon,
   PageShell,
@@ -9,13 +10,20 @@ import {
 export const metadata = {
   title: "Our Construction Process | Consultation to Close-Out",
   description:
-    "Maxim's front-to-back project process from consultation and engineering through design, execution, punch list, and close-out for industrial, commercial, and maintenance work.",
+    "Maxim's front-to-back St. Louis project process from consultation and engineering through design, execution, punch list, and close-out for industrial, commercial, and maintenance work.",
   alternates: { canonical: "/process" },
+  openGraph: {
+    title: "Our Construction Process | Consultation to Close-Out",
+    description:
+      "Maxim's front-to-back project process for industrial, commercial, and maintenance work in St. Louis.",
+    url: "/process",
+  },
 };
 
 export default function ProcessPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema name="Process" path="/process" />
       <section className="bg-brand-dark py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
           <SectionEyebrow>Process</SectionEyebrow>

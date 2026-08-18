@@ -1,12 +1,19 @@
 import Link from "next/link";
 import { BidRequestForm } from "../_components/contact-forms";
+import { BreadcrumbSchema } from "../_components/structured-data";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
-  title: "Bid Documents & Subcontractor Opportunities",
+  title: "Bid Documents & Subcontractor Opportunities | St. Louis",
   description:
     "Subcontractor access point for Maxim Construction bid documents, prints, project specifications, and upcoming St. Louis project opportunities. Request bid access online.",
   alternates: { canonical: "/blueprints" },
+  openGraph: {
+    title: "Bid Documents & Subcontractor Opportunities | St. Louis",
+    description:
+      "Request prints, specifications, and bid documents for Maxim Construction project opportunities in St. Louis.",
+    url: "/blueprints",
+  },
 };
 
 const bidPackages = [
@@ -21,6 +28,7 @@ const bidPackages = [
 export default function BlueprintsPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema name="Bid Documents" path="/blueprints" />
       <section className="bg-brand-dark py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
           <SectionEyebrow>View Blueprints</SectionEyebrow>

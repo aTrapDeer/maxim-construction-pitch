@@ -3,7 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { StructuredData } from "./_components/structured-data";
-import { SITE_URL, business } from "./_lib/seo";
+import { SITE_URL, business, seoKeywords } from "./_lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,10 +27,20 @@ export const metadata: Metadata = {
     template: "%s | Maxim Construction",
   },
   description:
-    "St. Louis construction management, factory and plant maintenance, office renovation, and specialty skilled work — millwright, machine rigging and moving — for commercial and industrial clients.",
+    "St. Louis construction management, factory and plant maintenance, commercial property maintenance for property managers, office renovation, and specialty skilled work — millwright, machine rigging and moving — for commercial and industrial clients.",
   applicationName: "Maxim Construction",
+  keywords: [...seoKeywords],
+  category: "Construction",
   alternates: {
     canonical: "/",
+  },
+  // Classic geo meta tags — still read by several local-search and mapping
+  // crawlers even though Google relies on the JSON-LD LocalBusiness data.
+  other: {
+    "geo.region": "US-MO",
+    "geo.placename": "St. Louis",
+    "geo.position": `${business.geo.latitude};${business.geo.longitude}`,
+    ICBM: `${business.geo.latitude}, ${business.geo.longitude}`,
   },
   openGraph: {
     type: "website",
@@ -40,7 +50,7 @@ export const metadata: Metadata = {
     title:
       "Maxim Construction | Construction Management & Factory Maintenance in St. Louis",
     description:
-      "Construction management, factory maintenance, office renovation, and specialty skilled work for commercial and industrial clients in the St. Louis area.",
+      "Construction management, factory maintenance, commercial property maintenance, office renovation, and specialty skilled work for commercial and industrial clients in the St. Louis area.",
     images: [
       {
         url: business.ogImage,
@@ -55,7 +65,7 @@ export const metadata: Metadata = {
     title:
       "Maxim Construction | Construction Management & Factory Maintenance in St. Louis",
     description:
-      "Construction management, factory maintenance, office renovation, and specialty skilled work for commercial and industrial clients in the St. Louis area.",
+      "Construction management, factory maintenance, commercial property maintenance, office renovation, and specialty skilled work for commercial and industrial clients in the St. Louis area.",
     images: [business.ogImage],
   },
   icons: {
