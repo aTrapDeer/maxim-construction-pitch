@@ -23,7 +23,7 @@
   --font-body: var(--font-inter);
   --font-label: var(--font-inter);
 
-  --shadow-minimal: 0 4px 24px -8px rgba(0, 0, 0, 0.05);
+  --shadow-minimal: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -10px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 12px 32px -12px rgba(255, 69, 0, 0.25);
 }
 
@@ -47,6 +47,42 @@ a {
 
 button {
   cursor: pointer;
+}
+
+/* Keep long display headings from breaking into ragged single-word lines. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Visible, on-brand keyboard focus without disturbing mouse interaction. */
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+}
+
+/* Animated hairline underline for primary navigation links. */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1.5px;
+  background: var(--brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .tectonic-grid {
@@ -87,4 +123,18 @@ button {
 
 .opacity-0-init {
   opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in-up {
+    animation: none;
+  }
+
+  .opacity-0-init {
+    opacity: 1;
+  }
 }

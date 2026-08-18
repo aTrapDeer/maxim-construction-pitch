@@ -1,24 +1,27 @@
 import Link from "next/link";
+import { BreadcrumbSchema } from "../_components/structured-data";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
+import { partners } from "../_lib/seo";
 
 export const metadata = {
-  title: "About Maxim Construction | St. Louis Industrial & Commercial Builder",
+  title: "About | St. Louis Industrial & Commercial Builder",
   description:
-    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN and KOKA credentials, and broad fabrication capability.",
+    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN and KOKA credentials, and a fabrication partner network spanning Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL.",
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Maxim Construction | St. Louis Industrial & Commercial Builder",
+    description:
+      "A St. Louis builder pairing local skilled craftsmen with a fabrication partner network of roughly 200,000 sq ft of combined capability.",
+    url: "/about",
+  },
 };
 
 const credentials = ["ISN", "KOKA", "Safety and trade credentials"];
 
-const relationshipNotes = [
-  "Access to fabrication relationships through Western Heights Waterjet / Laser Jet.",
-  "Additional fabrication support through Confab relationships.",
-  "Approximately 200,000 square feet of combined fabrication capability across related resources.",
-];
-
 export default function AboutPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema name="About" path="/about" />
       <section className="bg-brand-dark py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
           <SectionEyebrow>About Maxim</SectionEyebrow>
@@ -79,29 +82,41 @@ export default function AboutPage() {
       <section className="tectonic-grid bg-brand-light py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 max-w-3xl">
-            <SectionEyebrow>Resource Relationships</SectionEyebrow>
+            <SectionEyebrow>Partner Network</SectionEyebrow>
             <h2 className="mb-6 font-headline text-4xl font-black leading-tight tracking-tighter text-brand-dark md:text-5xl">
-              FABRICATION ACCESS WITHOUT MAKING IT THE HEADLINE
+              A CONNECTED ST. LOUIS FABRICATION NETWORK
             </h2>
             <p className="text-lg leading-relaxed text-brand-muted">
-              Fabrication relationships strengthen Maxim&apos;s field capability
-              while keeping the primary story focused on Maxim&apos;s direct
-              project execution.
+              Maxim is partnered with three established St. Louis fabrication
+              companies, giving clients roughly 200,000 square feet of combined
+              fabrication capability behind Maxim&apos;s direct project
+              execution.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {relationshipNotes.map((note) => (
-              <article
-                key={note}
-                className="rounded-sm border border-brand-border bg-white p-6 shadow-minimal"
+            {partners.map((partner) => (
+              <a
+                key={partner.name}
+                href={partner.url}
+                target="_blank"
+                rel="noopener"
+                className="group flex flex-col rounded-sm border border-brand-border bg-white p-6 shadow-minimal transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-accent/40 hover:shadow-2xl"
               >
                 <Icon
                   name="layers"
                   className="mb-6 text-3xl text-brand-accent"
                 />
-                <p className="leading-relaxed text-brand-muted">{note}</p>
-              </article>
+                <h3 className="mb-3 font-headline text-2xl font-bold tracking-tight text-brand-dark">
+                  {partner.name}
+                </h3>
+                <p className="mb-6 leading-relaxed text-brand-muted">
+                  {partner.description}
+                </p>
+                <span className="mt-auto inline-flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest text-brand-dark transition-all group-hover:gap-4 group-hover:text-brand-accent">
+                  Visit site <Icon name="north_east" />
+                </span>
+              </a>
             ))}
           </div>
         </div>

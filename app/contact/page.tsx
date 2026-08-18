@@ -1,12 +1,19 @@
 import Link from "next/link";
 import { ProjectInquiryForm } from "../_components/contact-forms";
+import { BreadcrumbSchema } from "../_components/structured-data";
 import { Icon, PageShell, SectionEyebrow } from "../_components/site";
 
 export const metadata = {
   title: "Contact & Get a Quote | St. Louis, MO",
   description:
-    "Contact Maxim Construction in St. Louis, MO at (314) 481-4111 or start a project online. Construction management, factory maintenance, office renovation, and specialty skilled work.",
+    "Contact Maxim Construction in St. Louis, MO at (314) 481-4111 or start a project online. Construction management, factory maintenance, commercial property maintenance, office renovation, and specialty skilled work.",
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Maxim Construction | Get a Quote in St. Louis, MO",
+    description:
+      "Call (314) 481-4111 or start a project online with Maxim Construction in St. Louis.",
+    url: "/contact",
+  },
 };
 
 const contactDetails = [
@@ -26,6 +33,7 @@ const contactDetails = [
 export default function ContactPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema name="Contact" path="/contact" />
       <section className="bg-brand-dark py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
           <SectionEyebrow>Contact</SectionEyebrow>

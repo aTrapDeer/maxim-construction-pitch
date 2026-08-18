@@ -1,17 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Icon, PageShell, SectionEyebrow, services } from "../_components/site";
+import {
+  BreadcrumbSchema,
+  FaqSchema,
+} from "../_components/structured-data";
+import {
+  Icon,
+  PageShell,
+  SectionEyebrow,
+  faqs,
+  services,
+} from "../_components/site";
 
 export const metadata = {
-  title: "Construction Management, Factory Maintenance & Millwright Services",
+  title:
+    "St. Louis Construction Management, Factory Maintenance & Millwright Services",
   description:
-    "Maxim's St. Louis services: construction management, factory and plant maintenance, office renovation, and specialty skilled work including millwright, machine rigging, and machine moving.",
+    "Maxim's St. Louis services: construction management, factory and plant maintenance, commercial property maintenance, office renovation, and specialty skilled work including millwright, machine rigging, and machine moving.",
   alternates: { canonical: "/services" },
+  openGraph: {
+    title:
+      "St. Louis Construction Management, Factory Maintenance & Millwright Services",
+    description:
+      "Construction management, plant and property maintenance, office renovation, and millwright / machine rigging services for greater St. Louis.",
+    url: "/services",
+  },
 };
 
 export default function ServicesPage() {
   return (
     <PageShell>
+      <BreadcrumbSchema name="Services" path="/services" />
+      <FaqSchema />
       <section className="bg-brand-dark py-24 text-white">
         <div className="mx-auto max-w-7xl px-6">
           <SectionEyebrow>Services</SectionEyebrow>
@@ -20,8 +40,9 @@ export default function ServicesPage() {
           </h1>
           <p className="max-w-3xl text-xl leading-relaxed text-white/72">
             Maxim organizes its work around construction management, factory
-            maintenance, office renovation, and specialty skills so clients can
-            quickly find the right capability and supporting project examples.
+            maintenance, office renovation, and specialty skills so St. Louis
+            clients can quickly find the right capability and supporting
+            project examples.
           </p>
         </div>
       </section>
@@ -86,7 +107,36 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="border-t border-brand-border bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-14 max-w-3xl">
+            <SectionEyebrow>Common Questions</SectionEyebrow>
+            <h2 className="mb-6 font-headline text-4xl font-black leading-tight tracking-tighter text-brand-dark md:text-5xl">
+              ST. LOUIS CONSTRUCTION QUESTIONS, ANSWERED
+            </h2>
+            <p className="text-lg leading-relaxed text-brand-muted">
+              Direct answers about Maxim&apos;s services, service area, partner
+              fabrication network, and how to start a project.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            {faqs.map((faq) => (
+              <article
+                key={faq.question}
+                className="rounded-sm border border-brand-border bg-brand-light p-8"
+              >
+                <h3 className="mb-3 font-headline text-xl font-bold tracking-tight text-brand-dark">
+                  {faq.question}
+                </h3>
+                <p className="leading-relaxed text-brand-muted">{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="tectonic-grid bg-brand-light py-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-2">
           <div>
             <SectionEyebrow>Project Flow</SectionEyebrow>

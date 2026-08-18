@@ -29,7 +29,7 @@ export default function Home() {
 
             <p className="animate-fade-in-up animation-delay-100 opacity-0-init mb-10 max-w-2xl text-xl font-light leading-relaxed text-white/80 md:text-2xl">
               Executing high-stakes infrastructure, industrial, and commercial
-              projects with surgical precision.
+              projects across greater St. Louis with surgical precision.
             </p>
 
             <div className="animate-fade-in-up animation-delay-200 opacity-0-init flex flex-wrap gap-4">
@@ -75,7 +75,7 @@ export default function Home() {
 
             return (
               <div key={stat.label} className="flex flex-col gap-2">
-                <span className="font-headline text-4xl font-black tracking-tighter text-brand-dark md:text-5xl">
+                <span className="font-headline text-4xl font-black tracking-tighter tabular-nums text-brand-dark md:text-5xl">
                   {numericPart}
                   {suffixPart && (
                     <span className="text-brand-accent">{suffixPart}</span>
@@ -96,7 +96,7 @@ export default function Home() {
             <div className="max-w-2xl">
               <SectionEyebrow>Services</SectionEyebrow>
               <h2 className="font-headline text-4xl font-black leading-tight tracking-tighter text-brand-dark md:text-6xl">
-                INDUSTRIAL AND COMMERCIAL WORK, ORGANIZED BY NEED
+                ST. LOUIS INDUSTRIAL AND COMMERCIAL WORK, ORGANIZED BY NEED
               </h2>
             </div>
             <Link
@@ -112,7 +112,7 @@ export default function Home() {
               <Link
                 key={service.id}
                 href={`/services#${service.id}`}
-                className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-sm border border-brand-border/50 bg-white p-8 shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl"
+                className="group relative flex min-h-[320px] flex-col justify-end overflow-hidden rounded-sm border border-brand-border/50 bg-white p-8 shadow-minimal transition-all duration-500 hover:-translate-y-1 hover:border-brand-accent/40 hover:shadow-2xl"
               >
                 <Image
                   src={service.image}
@@ -192,13 +192,14 @@ export default function Home() {
               LOCAL SKILLED CRAFTSMEN WITH BROADER FABRICATION REACH
             </h2>
             <p className="max-w-2xl text-lg leading-relaxed text-white/72">
-              Maxim pairs project leadership with local skilled craftsmen and
-              trusted fabrication relationships, giving clients a practical
-              team for complex industrial, commercial, and maintenance work.
+              Maxim pairs project leadership with local skilled craftsmen and a
+              trusted fabrication partner network, giving St. Louis clients a
+              practical team for complex industrial, commercial, and
+              maintenance work.
             </p>
           </div>
           <div className="grid gap-4 lg:col-span-5">
-            {["ISN membership", "KOKA membership", "Fabrication relationships"].map(
+            {["ISN membership", "KOKA membership", "Partner fabrication network"].map(
               (credential) => (
                 <div
                   key={credential}

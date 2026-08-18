@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { partners } from "../_lib/seo";
 
 export const media = {
   heroConstruction: "/images/hero-construction.png",
@@ -31,11 +32,11 @@ export const services = [
     icon: "settings_suggest",
     image: media.engineeringDetail,
     description:
-      "Maintenance support for active plant environments where downtime, safety, and documentation matter.",
+      "Maintenance support for active plants and commercial facilities where downtime, safety, and documentation matter.",
     examples: [
       "Year-round plant maintenance programs",
       "Shutdown support and production-area upgrades",
-      "Reactive facility repairs and equipment support",
+      "Commercial property repairs and equipment support",
     ],
   },
   {
@@ -44,7 +45,7 @@ export const services = [
     icon: "domain",
     image: media.officeInterior,
     description:
-      "White box, workspace, and commercial renovation work delivered with clean sequencing and minimal disruption.",
+      "White box, workspace, and commercial renovation work delivered with clean sequencing and minimal disruption for owners, tenants, and property managers.",
     examples: [
       "Office build-outs and refreshes",
       "White box construction",
@@ -96,6 +97,42 @@ export const processSteps = [
     title: "Close-Out",
     description:
       "Wrap documentation, owner requirements, final coordination, and handoff so the project finishes correctly.",
+  },
+] as const;
+
+// Visible FAQ content (services page) — mirrored into FAQPage JSON-LD for
+// answer-engine and featured-snippet targeting. Keep both in sync by editing
+// only this list.
+export const faqs = [
+  {
+    question: "What construction services does Maxim Construction provide in St. Louis?",
+    answer:
+      "Maxim Construction provides construction management, factory and plant maintenance, office renovation, and specialty skilled work — including millwright services, machine rigging, and machine moving — for commercial and industrial clients across the St. Louis metropolitan area.",
+  },
+  {
+    question: "Does Maxim work with property managers and building owners?",
+    answer:
+      "Yes. Maxim supports property management companies, building owners, and facility teams with commercial property maintenance, tenant build-outs, office renovation, and ongoing facility repair programs throughout greater St. Louis.",
+  },
+  {
+    question: "What areas does Maxim Construction serve?",
+    answer:
+      "Maxim is headquartered at 5922 S Broadway in St. Louis, Missouri and serves the entire St. Louis metropolitan area, including St. Louis City, St. Louis County, St. Charles County, Jefferson County, and the Metro East.",
+  },
+  {
+    question: "Can Maxim handle fabrication-heavy projects?",
+    answer:
+      "Yes. Through its partner network — Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL (Continental Fabricators & Erectors) — Maxim draws on roughly 200,000 square feet of combined fabrication capability, from industrial ventilation and ductwork to precision waterjet and laser cutting and ASME pressure vessel work.",
+  },
+  {
+    question: "Does Maxim provide millwright and machine rigging services?",
+    answer:
+      "Yes. Millwright work, machine rigging, and machine moving are core specialty services, supporting equipment installs, plant relocations, and production-line changes in active facilities.",
+  },
+  {
+    question: "How do I get a quote from Maxim Construction?",
+    answer:
+      "Call (314) 481-4111 or submit your project details through the contact page. Maxim routes each inquiry for estimating, scheduling, site review, and next-step coordination.",
   },
 ] as const;
 
@@ -245,6 +282,10 @@ export function Header() {
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-brand-border bg-white/85 shadow-sm backdrop-blur-xl">
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-0.5 bg-linear-to-r from-brand-accent via-orange-400 to-brand-accent"
+      />
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <Link href="/" className="flex items-center" aria-label="Maxim home">
           <Image
@@ -262,7 +303,7 @@ export function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className="font-headline text-sm font-medium tracking-tight text-brand-muted transition-colors hover:text-brand-dark"
+              className="nav-link font-headline text-sm font-medium tracking-tight text-brand-muted transition-colors hover:text-brand-dark"
             >
               {link.label}
             </Link>
@@ -296,8 +337,9 @@ export function Footer() {
             />
           </div>
           <p className="mb-8 max-w-xs text-sm leading-relaxed">
-            Construction management, maintenance, renovation, and specialty
-            project support for commercial and plant environments.
+            Construction management, property maintenance, renovation, and
+            specialty project support for commercial and plant environments
+            across greater St. Louis.
           </p>
           <Link
             href="/blueprints"
@@ -307,7 +349,7 @@ export function Footer() {
           </Link>
         </div>
 
-        <div className="md:col-span-2 md:col-start-7">
+        <div className="md:col-span-2 md:col-start-5">
           <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Solutions
           </h2>
@@ -343,6 +385,26 @@ export function Footer() {
                 >
                   {label}
                 </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-2">
+          <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
+            Partners
+          </h2>
+          <ul className="space-y-4">
+            {partners.map((partner) => (
+              <li key={partner.name}>
+                <a
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-sm text-brand-muted transition-colors duration-300 hover:text-brand-accent"
+                >
+                  {partner.name}
+                </a>
               </li>
             ))}
           </ul>
