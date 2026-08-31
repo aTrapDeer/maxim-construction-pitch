@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     template: "%s | Maxim Construction",
   },
   description:
-    "St. Louis construction management, factory and plant maintenance, commercial property maintenance for property managers, office renovation, and specialty skilled work — millwright, machine rigging and moving — for commercial and industrial clients.",
+    "St. Louis construction management, factory and plant maintenance, commercial property maintenance for property managers, office renovation, and specialty skilled work (millwright, machine rigging and moving) for commercial and industrial clients.",
   applicationName: "Maxim Construction",
   keywords: [...seoKeywords],
   category: "Construction",
   alternates: {
     canonical: "/",
   },
-  // Classic geo meta tags — still read by several local-search and mapping
+  // Classic geo meta tags, still read by several local-search and mapping
   // crawlers even though Google relies on the JSON-LD LocalBusiness data.
   other: {
     "geo.region": "US-MO",

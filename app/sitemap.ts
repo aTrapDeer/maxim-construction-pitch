@@ -4,8 +4,8 @@ import { SITE_URL } from "./_lib/seo";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  // Canonical routes only. /quote and /start-project are intentionally omitted —
-  // they permanently redirect to /contact, which is the canonical client page.
+  // Canonical routes only. /quote and /start-project are intentionally omitted
+  // because they permanently redirect to /contact, the canonical client page.
   const routes: Array<{
     path: string;
     priority: number;

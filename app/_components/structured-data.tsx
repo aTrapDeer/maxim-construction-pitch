@@ -58,7 +58,7 @@ export function StructuredData() {
           name,
         })),
         knowsAbout: [...seoKeywords],
-        // Trade memberships (ISN, COCA, MAoM) — trust signals for local rich
+        // Trade memberships (ISN, COCA, MAoM): trust signals for local rich
         // results and entity association.
         memberOf: memberships.map((membership) => ({
           "@type": "Organization",
@@ -100,7 +100,7 @@ export function StructuredData() {
         url: business.url,
         logo: business.logo,
         telephone: business.telephone,
-        // Affiliated fabrication companies — helps search engines connect the
+        // Affiliated fabrication companies. Helps search engines connect the
         // Maxim entity with its partner network.
         knowsAbout: partners.map((partner) => partner.url),
       },
@@ -144,7 +144,7 @@ export function BreadcrumbSchema({
   return <JsonLd data={data} />;
 }
 
-// FAQPage schema mirroring the visible FAQ section — targets answer engines
+// FAQPage schema mirroring the visible FAQ section. Targets answer engines
 // (AI search, featured snippets, "people also ask").
 export function FaqSchema() {
   const data = {

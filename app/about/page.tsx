@@ -6,7 +6,7 @@ import { partners } from "../_lib/seo";
 export const metadata = {
   title: "About | St. Louis Industrial & Commercial Builder",
   description:
-    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN, COCA, and MAoM credentials, and a fabrication partner network spanning Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL.",
+    "About Maxim Construction, a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN, COCA, and MAoM credentials, and a fabrication partner network spanning Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Maxim Construction | St. Louis Industrial & Commercial Builder",
@@ -19,7 +19,7 @@ export const metadata = {
 const credentials = [
   "ISN",
   "COCA",
-  "MAoM — Missouri Association of Manufacturers",
+  "MAoM (Missouri Association of Manufacturers)",
   "Safety and trade credentials",
 ];
 
