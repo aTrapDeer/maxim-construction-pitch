@@ -28,7 +28,7 @@ export const business = {
   areaServed: "St. Louis Metropolitan Area, Missouri",
 } as const;
 
-// Localities used for areaServed in structured data — broadens local-pack
+// Localities used for areaServed in structured data. Broadens local-pack
 // relevance beyond the single metro string.
 export const serviceAreas = [
   "St. Louis",
@@ -66,7 +66,7 @@ export const seoKeywords = [
   "machine rigging St. Louis",
   "machine moving services",
   "industrial fabrication St. Louis",
-  // Millwright breakdown — conveyor, plant maintenance, fabrication, rigging,
+  // Millwright breakdown: conveyor, plant maintenance, fabrication, rigging,
   // machine setting/setup, packaging equipment.
   "conveyor installation and maintenance St. Louis",
   "machine setting and setup services",
@@ -75,7 +75,7 @@ export const seoKeywords = [
   "equipment rigging contractor",
   "machinery movers St. Louis",
   "plant equipment relocation",
-  // Carpentry breakdown — office renovation, millwork, rough framing, drywall,
+  // Carpentry breakdown: office renovation, millwork, rough framing, drywall,
   // ACT suspended ceilings, doors/hardware, trim carpentry.
   "commercial carpentry services St. Louis",
   "millwork installation St. Louis",
@@ -87,7 +87,7 @@ export const seoKeywords = [
   "trim carpentry services",
 ] as const;
 
-// Services offered beyond the four visible service lines — surfaced in the
+// Services offered beyond the four visible service lines, surfaced in the
 // JSON-LD offer catalog so search engines index the full capability set.
 export const extendedOfferings = [
   {
@@ -98,12 +98,12 @@ export const extendedOfferings = [
   {
     name: "Millwright & Machine Rigging",
     description:
-      "Millwright services — conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment — make up roughly 60% of Maxim's work. Rigging includes heavy equipment moving and machine and equipment moving for installs, plant relocations, and production-line changes.",
+      "Millwright services make up roughly 60% of Maxim's work: conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment. Rigging includes heavy equipment moving and machine and equipment moving for installs, plant relocations, and production-line changes.",
   },
   {
     name: "Commercial Carpentry Services",
     description:
-      "Carpentry services — office renovation, millwork, rough framing, drywall, ACT suspended ceilings, doors and hardware, and trim carpentry — make up roughly a third of Maxim's work.",
+      "Carpentry services make up roughly a third of Maxim's work: office renovation, millwork, rough framing, drywall, ACT suspended ceilings, doors and hardware, and trim carpentry.",
   },
   {
     name: "Plant Shutdown & Turnaround Support",
@@ -119,7 +119,7 @@ export const partners = [
     name: "Western Blow Pipe",
     url: "https://www.westernblowpipe.net/",
     description:
-      "St. Louis metal fabrication shop — stainless, aluminum, ductwork, pipe fittings, and industrial ventilation — fabricating, installing, and repairing since 1895.",
+      "St. Louis metal fabrication shop working in stainless, aluminum, ductwork, pipe fittings, and industrial ventilation. Fabricating, installing, and repairing since 1895.",
   },
   {
     name: "St. Louis Waterjet & Laser",
@@ -131,6 +131,6 @@ export const partners = [
     name: "CFE-STL",
     url: "https://www.cfe-stl.com/",
     description:
-      "Continental Fabricators & Erectors — ASME-certified industrial fabrication including pressure vessels, boilers, custom weldments, and process equipment from a 140,000 sq ft St. Louis facility.",
+      "Continental Fabricators & Erectors provides ASME-certified industrial fabrication, including pressure vessels, boilers, custom weldments, and process equipment, from a 140,000 sq ft St. Louis facility.",
   },
 ] as const;

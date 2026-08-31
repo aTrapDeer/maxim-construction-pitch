@@ -58,7 +58,7 @@ export const services = [
     icon: "construction",
     image: media.skyscraper,
     description:
-      "Millwright and rigging work for production environments — machine rigging, heavy equipment moving, machine setting and setup, conveyor systems, and packaging equipment.",
+      "Millwright and rigging work for production environments, covering machine rigging, heavy equipment moving, machine setting and setup, conveyor systems, and packaging equipment.",
     examples: [
       "Machine rigging and heavy equipment moving",
       "Machine setting, setup, and alignment",
@@ -100,14 +100,14 @@ export const processSteps = [
   },
 ] as const;
 
-// Visible FAQ content (services page) — mirrored into FAQPage JSON-LD for
+// Visible FAQ content (services page), mirrored into FAQPage JSON-LD for
 // answer-engine and featured-snippet targeting. Keep both in sync by editing
 // only this list.
 export const faqs = [
   {
     question: "What construction services does Maxim Construction provide in St. Louis?",
     answer:
-      "Maxim Construction provides construction management, factory and plant maintenance, office renovation, and specialty skilled work — including millwright services, machine rigging, and machine moving — for commercial and industrial clients across the St. Louis metropolitan area.",
+      "Maxim Construction provides construction management, factory and plant maintenance, office renovation, and specialty skilled work, including millwright services, machine rigging, and machine moving, for commercial and industrial clients across the St. Louis metropolitan area.",
   },
   {
     question: "Does Maxim work with property managers and building owners?",
@@ -122,17 +122,17 @@ export const faqs = [
   {
     question: "Can Maxim handle fabrication-heavy projects?",
     answer:
-      "Yes. Through its partner network — Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL (Continental Fabricators & Erectors) — Maxim draws on more than 200,000 square feet of combined fabrication capability, from industrial ventilation and ductwork to precision waterjet and laser cutting and ASME pressure vessel work.",
+      "Yes. Through its partner network of Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL (Continental Fabricators & Erectors), Maxim draws on more than 200,000 square feet of combined fabrication capability, from industrial ventilation and ductwork to precision waterjet and laser cutting and ASME pressure vessel work.",
   },
   {
     question: "Does Maxim provide millwright and machine rigging services?",
     answer:
-      "Yes. Millwright work is the largest share of what Maxim does — conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment — supporting equipment installs, plant relocations, and production-line changes in active facilities.",
+      "Yes. Millwright work is the largest share of what Maxim does, covering conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment. These crews support equipment installs, plant relocations, and production-line changes in active facilities.",
   },
   {
     question: "Can Maxim move heavy equipment or machinery in St. Louis?",
     answer:
-      "Yes. Maxim's rigging crews handle heavy equipment moving and machine or equipment moving throughout the St. Louis area — from relocating a single machine within a plant to moving production equipment between facilities, including setting and aligning it in its new position.",
+      "Yes. Maxim's rigging crews handle heavy equipment moving and machine or equipment moving throughout the St. Louis area, from relocating a single machine within a plant to moving production equipment between facilities, including setting and aligning it in its new position.",
   },
   {
     question: "Does Maxim install conveyor and packaging equipment?",
