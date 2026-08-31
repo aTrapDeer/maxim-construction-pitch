@@ -39,8 +39,17 @@ export const serviceAreas = [
   "St. Louis Metropolitan Area",
 ] as const;
 
+// Trade memberships and credentials. Shown on the home page, About page, and
+// footer, and included in the JSON-LD entity graph as memberOf entries.
+export const memberships: ReadonlyArray<{ name: string; fullName?: string }> = [
+  { name: "ISN" },
+  { name: "COCA" },
+  { name: "MAoM", fullName: "Missouri Association of Manufacturers" },
+];
+
 // Search phrases the site should rank for. Used in metadata keywords and
-// as knowsAbout entries in the JSON-LD entity graph.
+// as knowsAbout entries in the JSON-LD entity graph. Weighted toward the two
+// core work categories: millwright (~60% of work) and carpentry (~33%).
 export const seoKeywords = [
   "St. Louis construction company",
   "construction management St. Louis",
@@ -57,6 +66,25 @@ export const seoKeywords = [
   "machine rigging St. Louis",
   "machine moving services",
   "industrial fabrication St. Louis",
+  // Millwright breakdown — conveyor, plant maintenance, fabrication, rigging,
+  // machine setting/setup, packaging equipment.
+  "conveyor installation and maintenance St. Louis",
+  "machine setting and setup services",
+  "packaging equipment installation",
+  "heavy equipment moving St. Louis",
+  "equipment rigging contractor",
+  "machinery movers St. Louis",
+  "plant equipment relocation",
+  // Carpentry breakdown — office renovation, millwork, rough framing, drywall,
+  // ACT suspended ceilings, doors/hardware, trim carpentry.
+  "commercial carpentry services St. Louis",
+  "millwork installation St. Louis",
+  "rough framing contractor",
+  "commercial drywall contractor St. Louis",
+  "ACT suspended ceiling installation",
+  "acoustical ceiling tile contractor",
+  "commercial doors and hardware installation",
+  "trim carpentry services",
 ] as const;
 
 // Services offered beyond the four visible service lines — surfaced in the
@@ -70,7 +98,12 @@ export const extendedOfferings = [
   {
     name: "Millwright & Machine Rigging",
     description:
-      "Millwright work, machine rigging, and machine moving for equipment installs, plant relocations, and production-line changes.",
+      "Millwright services — conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment — make up roughly 60% of Maxim's work. Rigging includes heavy equipment moving and machine and equipment moving for installs, plant relocations, and production-line changes.",
+  },
+  {
+    name: "Commercial Carpentry Services",
+    description:
+      "Carpentry services — office renovation, millwork, rough framing, drywall, ACT suspended ceilings, doors and hardware, and trim carpentry — make up roughly a third of Maxim's work.",
   },
   {
     name: "Plant Shutdown & Turnaround Support",

@@ -6,17 +6,22 @@ import { partners } from "../_lib/seo";
 export const metadata = {
   title: "About | St. Louis Industrial & Commercial Builder",
   description:
-    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN and KOKA credentials, and a fabrication partner network spanning Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL.",
+    "About Maxim Construction — a St. Louis builder serving industrial and commercial clients with local skilled craftsmen, ISN, COCA, and MAoM credentials, and a fabrication partner network spanning Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Maxim Construction | St. Louis Industrial & Commercial Builder",
     description:
-      "A St. Louis builder pairing local skilled craftsmen with a fabrication partner network of roughly 200,000 sq ft of combined capability.",
+      "A St. Louis builder pairing local skilled craftsmen with a fabrication partner network of more than 200,000 sq ft of combined capability.",
     url: "/about",
   },
 };
 
-const credentials = ["ISN", "KOKA", "Safety and trade credentials"];
+const credentials = [
+  "ISN",
+  "COCA",
+  "MAoM — Missouri Association of Manufacturers",
+  "Safety and trade credentials",
+];
 
 export default function AboutPage() {
   return (
@@ -79,7 +84,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="tectonic-grid bg-brand-light py-24">
+      <section
+        id="partner-network"
+        className="tectonic-grid scroll-mt-20 bg-brand-light py-24"
+      >
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 max-w-3xl">
             <SectionEyebrow>Partner Network</SectionEyebrow>
@@ -88,9 +96,9 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg leading-relaxed text-brand-muted">
               Maxim is partnered with three established St. Louis fabrication
-              companies, giving clients roughly 200,000 square feet of combined
-              fabrication capability behind Maxim&apos;s direct project
-              execution.
+              companies, giving clients more than 200,000 square feet of
+              combined fabrication capability behind Maxim&apos;s direct
+              project execution.
             </p>
           </div>
 

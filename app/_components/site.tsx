@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { partners } from "../_lib/seo";
+import { memberships, partners } from "../_lib/seo";
 
 export const media = {
   heroConstruction: "/images/hero-construction.png",
@@ -58,11 +58,11 @@ export const services = [
     icon: "construction",
     image: media.skyscraper,
     description:
-      "A flexible category for machine rigging, machine moving, millwright work, and specialized facility projects.",
+      "Millwright and rigging work for production environments — machine rigging, heavy equipment moving, machine setting and setup, conveyor systems, and packaging equipment.",
     examples: [
-      "Machine rigging and moving",
-      "Millwright and equipment support",
-      "Specialized facility maintenance",
+      "Machine rigging and heavy equipment moving",
+      "Machine setting, setup, and alignment",
+      "Conveyor and packaging equipment installation",
     ],
   },
 ] as const;
@@ -122,12 +122,22 @@ export const faqs = [
   {
     question: "Can Maxim handle fabrication-heavy projects?",
     answer:
-      "Yes. Through its partner network — Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL (Continental Fabricators & Erectors) — Maxim draws on roughly 200,000 square feet of combined fabrication capability, from industrial ventilation and ductwork to precision waterjet and laser cutting and ASME pressure vessel work.",
+      "Yes. Through its partner network — Western Blow Pipe, St. Louis Waterjet & Laser, and CFE-STL (Continental Fabricators & Erectors) — Maxim draws on more than 200,000 square feet of combined fabrication capability, from industrial ventilation and ductwork to precision waterjet and laser cutting and ASME pressure vessel work.",
   },
   {
     question: "Does Maxim provide millwright and machine rigging services?",
     answer:
-      "Yes. Millwright work, machine rigging, and machine moving are core specialty services, supporting equipment installs, plant relocations, and production-line changes in active facilities.",
+      "Yes. Millwright work is the largest share of what Maxim does — conveyor systems, plant maintenance, fabrication, rigging, machine setting and setup, and packaging equipment — supporting equipment installs, plant relocations, and production-line changes in active facilities.",
+  },
+  {
+    question: "Can Maxim move heavy equipment or machinery in St. Louis?",
+    answer:
+      "Yes. Maxim's rigging crews handle heavy equipment moving and machine or equipment moving throughout the St. Louis area — from relocating a single machine within a plant to moving production equipment between facilities, including setting and aligning it in its new position.",
+  },
+  {
+    question: "Does Maxim install conveyor and packaging equipment?",
+    answer:
+      "Yes. Conveyor and packaging equipment work is a core part of Maxim's millwright services, covering installation, setting and setup, relocation, and ongoing plant maintenance support for production and packaging lines.",
   },
   {
     question: "How do I get a quote from Maxim Construction?",
@@ -137,9 +147,9 @@ export const faqs = [
 ] as const;
 
 export const stats = [
-  { value: "150+", label: "Completed Projects" },
-  { value: "0.00", label: "Safety Incident Rate" },
-  { value: "200K", label: "Sq. Ft. Fabrication Capability" },
+  { value: "Thousands+", label: "Jobs Completed" },
+  { value: ".69", label: "EMR Safety Rating" },
+  { value: "200K+", label: "Sq. Ft. Fabrication Capability" },
   { value: "24/7", label: "Site Support" },
 ] as const;
 
@@ -442,12 +452,14 @@ export function Footer() {
           &copy; 2026 MAXIM CONSTRUCTION. ALL RIGHTS RESERVED.
         </span>
         <div className="flex gap-8">
-          <span className="font-label text-[10px] uppercase tracking-widest text-white/50">
-            ISN
-          </span>
-          <span className="font-label text-[10px] uppercase tracking-widest text-white/50">
-            KOKA
-          </span>
+          {memberships.map((membership) => (
+            <span
+              key={membership.name}
+              className="font-label text-[10px] uppercase tracking-widest text-white/50"
+            >
+              {membership.name}
+            </span>
+          ))}
         </div>
       </div>
     </footer>
