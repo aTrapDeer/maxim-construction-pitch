@@ -69,7 +69,7 @@ export default function Home() {
       <section className="border-b border-brand-border bg-white py-16">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-6 md:grid-cols-4 md:gap-8">
           {stats.map((stat) => {
-            const valueMatch = stat.value.match(/^([\d.]+)(.*)$/);
+            const valueMatch = stat.value.match(/^(.+?)(\+*)$/);
             const numericPart = valueMatch ? valueMatch[1] : stat.value;
             const suffixPart = valueMatch ? valueMatch[2] : "";
 
@@ -199,7 +199,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-4 lg:col-span-5">
-            {["ISN membership", "KOKA membership", "Partner fabrication network"].map(
+            {["ISN membership", "COCA membership", "MAoM membership"].map(
               (credential) => (
                 <div
                   key={credential}
@@ -212,6 +212,19 @@ export default function Home() {
                 </div>
               ),
             )}
+            <Link
+              href="/about#partner-network"
+              className="group flex items-center gap-4 border border-white/10 bg-white/5 p-5 transition-colors duration-300 hover:border-brand-accent/60 hover:bg-white/10"
+            >
+              <Icon name="verified" className="text-2xl text-brand-accent" />
+              <span className="font-headline text-lg font-bold text-white">
+                Partner fabrication network
+              </span>
+              <Icon
+                name="north_east"
+                className="ml-auto text-lg text-white/40 transition-all group-hover:text-brand-accent"
+              />
+            </Link>
           </div>
         </div>
       </section>

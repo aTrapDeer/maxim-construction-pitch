@@ -16,7 +16,7 @@ export const metadata = {
   title:
     "St. Louis Construction Management, Factory Maintenance & Millwright Services",
   description:
-    "Maxim's St. Louis services: construction management, factory and plant maintenance, commercial property maintenance, office renovation, and specialty skilled work including millwright, machine rigging, and machine moving.",
+    "Maxim's St. Louis services: construction management, factory and plant maintenance, commercial property maintenance, office renovation, and specialty skilled work including millwright services, machine rigging, heavy equipment moving, and conveyor and packaging equipment installation.",
   alternates: { canonical: "/services" },
   openGraph: {
     title:

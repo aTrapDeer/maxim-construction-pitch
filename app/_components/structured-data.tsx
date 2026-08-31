@@ -2,6 +2,7 @@ import {
   SITE_URL,
   business,
   extendedOfferings,
+  memberships,
   partners,
   seoKeywords,
   serviceAreas,
@@ -57,6 +58,13 @@ export function StructuredData() {
           name,
         })),
         knowsAbout: [...seoKeywords],
+        // Trade memberships (ISN, COCA, MAoM) — trust signals for local rich
+        // results and entity association.
+        memberOf: memberships.map((membership) => ({
+          "@type": "Organization",
+          name: membership.fullName ?? membership.name,
+          ...(membership.fullName ? { alternateName: membership.name } : {}),
+        })),
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Construction & Maintenance Services",
