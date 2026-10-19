@@ -334,19 +334,19 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-white/10 bg-[#050505] px-6 py-16 text-brand-muted">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-12">
+    <footer className="w-full border-t border-white/10 bg-[#050505] px-6 py-10 text-brand-muted">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-12">
         <div className="md:col-span-4">
-          <div className="mb-8 flex items-center gap-3">
+          <div className="mb-5 flex items-center gap-3">
             <Image
               src={media.logo}
               alt="MAXIM logo"
               width={900}
               height={900}
-              className="h-24 w-24 object-contain"
+              className="h-20 w-20 object-contain"
             />
           </div>
-          <p className="mb-8 max-w-xs text-sm leading-relaxed">
+          <p className="mb-5 max-w-xs text-sm leading-relaxed">
             Construction management, property maintenance, renovation, and
             specialty project support for commercial and plant environments
             across greater St. Louis.
@@ -360,10 +360,10 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2 md:col-start-5">
-          <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
+          <h2 className="mb-4 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Solutions
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {services.map((service) => (
               <li key={service.id}>
                 <Link
@@ -378,10 +378,10 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
+          <h2 className="mb-4 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Company
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {[
               ["Process", "/process"],
               ["About", "/about"],
@@ -401,10 +401,10 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
+          <h2 className="mb-4 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Partners
           </h2>
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {partners.map((partner) => (
               <li key={partner.name}>
                 <a
@@ -421,7 +421,7 @@ export function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h2 className="mb-6 font-headline text-sm font-bold uppercase tracking-widest text-white">
+          <h2 className="mb-4 font-headline text-sm font-bold uppercase tracking-widest text-white">
             Contact
           </h2>
           <address className="text-sm not-italic leading-relaxed">
@@ -447,7 +447,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
+      <div className="mx-auto mt-8 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:flex-row">
         <span className="font-label text-xs tracking-widest">
           &copy; 2026 MAXIM CONSTRUCTION. ALL RIGHTS RESERVED.
         </span>
@@ -461,6 +461,17 @@ export function Footer() {
             </span>
           ))}
         </div>
+      </div>
+
+      <div className="mx-auto mt-4 max-w-7xl text-center">
+        <a
+          href="https://biat.dev"
+          target="_blank"
+          rel="noopener"
+          className="font-label text-[11px] tracking-widest text-white/50 transition-colors duration-300 hover:text-brand-accent"
+        >
+          Developed and powered by BIAT
+        </a>
       </div>
     </footer>
   );
